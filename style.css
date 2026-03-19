@@ -1,0 +1,238 @@
+/* General Body and Background */
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(to bottom, #fdfdfd, #e6f0ff);
+  color: #333;
+  background-attachment: fixed;
+}
+
+/* Profile Image */
+.profile {
+  display: block;
+  margin: 20px auto;
+  border-radius: 50%;
+  width: 300px;
+  border: 10px solid #b22222; /* matching site red */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  margin-top: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2.5em;
+}
+
+h3, h4 {
+  margin-top: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  position: relative;
+  color: #b22222; /* red accent */
+}
+
+h3::before, h4::before {
+  content: '★';
+  margin-right: 5px;
+  color: #0077b5; /* blue star accent */
+  font-size: 1em;
+  vertical-align: middle;
+}
+
+/* Paragraphs and lists */
+p, li {
+  margin-bottom: 15px;
+}
+
+strong {
+  color: #222;
+}
+
+ul, ol {
+  margin-left: 20px;
+}
+
+ol[type="i"] {
+  font-style: italic;
+}
+
+/* Dividers */
+hr {
+  border: none;
+  height: 3px;
+  margin: 30px 0;
+}
+
+hr.red { background-color: #b22222; }
+hr.blue { background-color: #0077b5; }
+
+/* Links */
+a {
+  color: #0077b5;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Tabs */
+.tabs {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tablink {
+  background-color: #f1f1f1;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0 5px;
+  border-radius: 5px;
+  transition: background 0.3s;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.tablink.active {
+  background-color: #0077b5;
+  color: white;
+}
+
+.tabcontent {
+  display: none;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Accordion (Price List) */
+.accordion {
+  background-color: #f1f1f1;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  margin-top: 5px;
+  border-radius: 5px;
+  transition: background 0.3s;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+.accordion.active {
+  background-color: #b22222;
+  color: white;
+}
+
+.panel {
+  display: none;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: #b22222;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+.btn:hover {
+  background-color: #8b1a1a;
+}
+
+/* Form Inputs */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+label {
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Top Navigation */
+.top-nav {
+  display: flex;
+  justify-content: center;
+  background-color: #0077b5;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 3px solid #b22222;
+}
+
+.top-nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background 0.3s;
+  font-family: 'Montserrat', sans-serif;
+}
+.top-nav a:hover {
+  background-color: #b22222;
+}
+
+/* Section Boxes */
+.section-box {
+  background-color: #ffffff;         
+  padding: 20px;                     /* space inside box */
+  margin: 20px 0;                    
+  border-radius: 10px;               
+  border-left: 5px solid #b22222;   
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); 
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;           /* keep text left-aligned */
+  text-align: left;                  /* for paragraphs and lists */
+}
+
+/* Remove default heading margins inside section-box */
+.section-box h3,
+.section-box h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #b22222;
+  margin-top: 0;       /* remove extra top space */
+  margin-bottom: 10px; /* small space below heading */
+}
+
+/* Paragraphs and lists inside section-box */
+.section-box p,
+.section-box ul,
+.section-box ol {
+  margin: 10px 0;      /* small top/bottom spacing */
+  line-height: 1.5;    /* nice readability */
+}
